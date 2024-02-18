@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0
+}
+
+.bookmarkForm{
+    width:40%;
+    margin:2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.bookmarkForm input{
+    padding:10px;
+}
+
+.bookmarkForm button{
+    padding: 10px;
+}
+
+.bookmarks{
+    width:40%;
+    margin:auto;
+}
+
+.bookmarks ul{
+    list-style: none;
+}
+
+.bookmarks ul li{
+    padding:10px;
+    margin:10px 0;
+    border:1px solid grey;
+    border-radius:5px;
+    font-size: 12px;
+}
+
+.bookmarks .actionButtons{
+    margin:10px 0;
+}
+
+.bookmarks .actionButtons button{
+    padding:5px;
+}
