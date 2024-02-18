@@ -14,24 +14,25 @@ document.addEventListener("DOMContentLoaded",()=>{
 form.addEventListener('submit',(event)=>{
     event.preventDefault()
    
-    //Using Array.forEach()
-    
-    /*
-    
+    /*Keep in mind that you can update an object using the spread operator
+    ex: 
+    let person={name:"Jack",age:12}
+    person={...person,name:"John"}    --the name has been changed to john
+    */
+
+    /*Using Array.forEach()
+
     let updatedBookmarks=[]
     bookmarks.forEach(bookmark=>{
         if(bookmark.id===parseInt(urlParams.get("id"))){
-            let updatedBookmark=bookmark
-            updatedBookmark.siteName=siteName.value
-            updatedBookmark.siteUrl=siteUrl.value
-            updatedBookmarks.push(updatedBookmark)
+            updatedBookmarks.push({...bookmark,siteName:siteName.value,siteUrl:siteUrl.value})
             return
         }
         updatedBookmarks.push(bookmark)
     })
-    localStorage.setItem("bookmarks",JSON.stringify(bookmarks))
-
+    localStorage.setItem("bookmarks",JSON.stringify(updatedBookmarks))
     */
+
     //The more efficient solution using Array.map()
 
     bookmarks=bookmarks.map(bookmark=>{
